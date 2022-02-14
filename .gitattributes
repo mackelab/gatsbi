@@ -1,0 +1,6 @@
+plotting_code/plotting_data/camera_samples.npz filter=lfs diff=lfs merge=lfs -text
+plotting_code/plotting_data/gatsbi_slcp_samples.npy filter=lfs diff=lfs merge=lfs -text
+plotting_code/plotting_data/gatsbi_two_moons_samples.npy filter=lfs diff=lfs merge=lfs -text
+plotting_code/plotting_data/shallow_water_data.npz filter=lfs diff=lfs merge=lfs -text
+plotting_code/plotting_data/slcp_c2st_scores.yaml filter=lfs diff=lfs merge=lfs -text
+plotting_code/plotting_data/two_moons_c2st_scores.yaml filter=lfs diff=lfs merge=lfs -text
