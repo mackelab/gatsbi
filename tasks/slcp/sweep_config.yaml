@@ -1,0 +1,15 @@
+name: "Sweep with smaller gen"
+program: run.py
+method: grid
+metric:
+  name: gen_loss
+  goal: minimise
+parameters:
+  num_simulations:
+    values: [1000, 10000, 100000]
+  project_name:
+    values: ["Gaussian Nonlinear"]
+  task_name:
+    values: ["gaussian_nonlinear"]
+  epochs:
+    values: [75000]

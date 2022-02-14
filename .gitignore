@@ -1,3 +1,10 @@
+# BASH extensions
+*.sh
+
+# Folders
+.vscode/
+wandb
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -7,6 +14,7 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+src/
 .Python
 build/
 develop-eggs/

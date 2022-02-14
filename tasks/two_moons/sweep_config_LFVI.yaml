@@ -1,0 +1,17 @@
+name: "Sweep - Two Moons - LFVI"
+program: run.py
+method: grid
+metric:
+  name: gen_loss
+  goal: minimise
+parameters:
+  num_simulations:
+    values: [1000, 10000, 100000]
+  project_name:
+    values: ["LFVI"]
+  task_name:
+    values: ["two_moons"]
+  epochs:
+    values: [50000]
+  loss:
+    values: ["kldiv"]

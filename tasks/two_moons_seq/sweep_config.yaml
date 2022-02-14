@@ -1,0 +1,16 @@
+name: "Sweep over obs with inv imp wts"
+program: run_sequential.py
+method: grid
+metric:
+  name: gen_loss
+  goal: minimise
+  
+parameters:
+  obs_num:
+      values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  seq_impwts:
+    values: ['ebm']
+  project_name:
+    values: ["Two Moons Seq"]
+  task_name:
+    values: ["two_moons"]

@@ -1,0 +1,19 @@
+batch_size_perc: .0005
+dis_iter: 2
+dis_opt_args:
+- 0.0001
+- - 0.9
+  - 0.99
+gen_iter: 1
+gen_opt_args:
+- 0.0001
+- - 0.9
+  - 0.99
+hold_out: 100
+loss: cross_entropy
+max_norm_dis: .01
+max_norm_gen: .01
+num_simulations: 2
+path_to_data: "./shallow_water_data/"
+unroll_steps: 0
+log_dataloader: False

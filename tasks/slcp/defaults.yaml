@@ -1,0 +1,53 @@
+batch_size_perc: 0.1
+dis_iter: 10
+dis_nonlin: leaky_relu
+dis_nonlin_kwargs:
+  negative_slope: 0.1
+dis_opt_args:
+- 0.0001
+- - 0.9
+  - 0.99
+dis_seed: None
+dis_units:
+- 13
+- 2048
+- 2048
+- 2048
+- 2048
+- 2048
+- 1
+gen_iter: 1
+gen_network_kwargs:
+  add_noise_kwargs:
+    lat_dim: 5
+    output_dim: 128
+    heteroscedastic: True
+  add_noise_layer: 5
+  gen_nonlin: leaky_relu
+  gen_nonlin_kwargs:
+    negative_slope: 0.1
+  gen_units:
+  - 8
+  - 128
+  - 128
+  - 128
+  - 128
+  - 5
+# gen_network_kwargs:
+#   theta_dim: 5
+#   x_dim: 8
+#   hidden_features: 50
+gen_opt_args:
+- 0.0001
+- - 0.9
+  - 0.99
+gen_seed: None
+hold_out: 100
+loss: cross_entropy
+max_norm_dis: .inf
+max_norm_gen: .inf
+net_type: "mlp"
+# net_type: "nsf"
+num_simulations: 10000
+sample_seed: None
+stop_thresh: 0.001

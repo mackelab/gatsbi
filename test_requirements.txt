@@ -1,0 +1,9 @@
+numpy
+torch==1.7.0
+torchvision
+wandb
+pandas
+plotly
+scikit-learn
+scikit-image
+pyro-ppl

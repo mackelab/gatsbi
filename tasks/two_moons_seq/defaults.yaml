@@ -1,0 +1,76 @@
+batch_size_perc: 0.1
+budget_per_round:
+- 2500
+- 7500
+classifier_theta_kwargs:
+  hidden_layer_sizes:
+  - 128
+  - 128
+  - 128
+  - 128
+  max_iter: 5000
+classifier_obs_kwargs:
+  hidden_layer_sizes:
+  - 128
+  - 128
+  - 128
+  - 128
+  max_iter: 5000
+dir_prev_rnd: "" # leave blank if start_train_with_rnd == 0
+dis_iter: 10
+dis_nonlin: leaky_relu
+dis_nonlin_kwargs:
+  negative_slope: 0.1
+dis_opt_args:
+- 0.0001
+- - 0.9
+  - 0.99
+dis_seed: None
+dis_units:
+- 4
+- 2048
+- 2048
+- 2048
+- 2048
+- 2048
+- 1
+epochs_per_round:
+- 5
+- 15
+gen_iter: 1
+gen_network_kwargs:
+  add_noise_kwargs:
+    lat_dim: 2
+    output_dim: 128
+    heteroscedastic: True
+  add_noise_layer: 5
+  gen_nonlin: leaky_relu
+  gen_nonlin_kwargs:
+    negative_slope: 0.1
+  gen_units:
+  - 2
+  - 128
+  - 128
+  - 128
+  - 128
+  - 2
+gen_opt_args:
+- 0.0001
+- - 0.9
+  - 0.99
+gen_seed: None
+hold_out: 100
+loss: cross_entropy
+max_norm_dis: .inf
+max_norm_gen: .inf
+net_type: "mlp"
+num_simulations: 10000
+obs_num: 1
+reuse_samples: True
+start_with_rnd: 1
+sample_seed: None
+seq_impwts: "invimpwts"
+warmup_steps: None
+num_particles: 50
+log_dataloader: True
+stop_thresh: 0.001

@@ -1,0 +1,40 @@
+# http://matplotlib.org/users/customizing.html
+
+text.usetex          : False
+font.family          : serif
+font.serif           : Arial, sans-serif
+font.sans-serif      : Arial, sans-serif
+font.cursive         : Arial, sans-serif
+font.size            : 12
+legend.fontsize      : 12
+axes.labelsize       : 12
+xtick.labelsize      : 12
+ytick.labelsize      : 12
+
+image.interpolation   : nearest
+image.resample        : False
+image.composite_image : True
+
+axes.spines.left     : True
+axes.spines.bottom   : True
+axes.spines.top      : False
+axes.spines.right    : False
+
+axes.linewidth       : 1.5
+xtick.major.width    : 1.5
+xtick.minor.width    : 1.5
+ytick.major.width    : 1.5
+ytick.minor.width    : 1.5
+
+lines.linewidth      : 1.8
+lines.markersize     : 3
+
+savefig.dpi          : 100
+savefig.bbox         : tight
+savefig.pad_inches   : 0.1
+#savefig.format       : svg
+
+svg.image_inline     : True
+svg.fonttype         : none
+
+legend.frameon       : False
