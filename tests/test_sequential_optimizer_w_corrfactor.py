@@ -40,7 +40,7 @@ class TestSeqOptimiser(unittest.TestCase):
         # Make prior samples and dataloader
         thetas, obs = _sample(_prior, _simulator, sample_seed=42, num_samples=20)
         dataloader = {
-            "0": make_loader(10, {"inputs": [thetas, obs], "hold_out": 10}, MakeDataset)
+            "0": make_loader(10, {"inputs": [thetas, obs], "hold_out": 1}, MakeDataset)
         }
 
         # Set hyperparameters
@@ -88,7 +88,7 @@ class TestSeqOptimiser(unittest.TestCase):
         thetas, obs = _sample(_prior, _simulator, sample_seed=42, num_samples=20)
         dataloader = {
             "0": make_loader(
-                10, {"inputs": [thetas, obs], "hold_out": 10}, loader_class=MakeDataset
+                10, {"inputs": [thetas, obs], "hold_out": 1}, loader_class=MakeDataset
             )
         }
 
@@ -127,8 +127,7 @@ class TestSeqOptimiser(unittest.TestCase):
 
     def seq_optimizer_ebm_rejsample_fwdpass(self, round_number):
         """
-        Test 2 epochs of updates with EBM correction and rejection
-        sampling.
+        Test 2 epochs of updates with EBM correction and rejection sampling.
         """
         # Make networks
         gen = Generator(
@@ -142,7 +141,7 @@ class TestSeqOptimiser(unittest.TestCase):
         thetas, obs = _sample(_prior, _simulator, sample_seed=42, num_samples=20)
         dataloader = {
             "0": make_loader(
-                10, {"inputs": [thetas, obs], "hold_out": 10}, loader_class=MakeDataset
+                10, {"inputs": [thetas, obs], "hold_out": 1}, loader_class=MakeDataset
             )
         }
 

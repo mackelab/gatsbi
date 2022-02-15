@@ -35,6 +35,7 @@ class RejectionSample(Rejector):
 
         # probs = torch.exp(log_prob_accept).clamp_(0.0, 1.0)
         done = torch.bernoulli(probs).bool()
+
         ct = 0
         while not done.all() and ct < self.num_particles:
             proposed_x = self.propose(sample_shape)
@@ -45,7 +46,9 @@ class RejectionSample(Rejector):
                 x[accept] = proposed_x[accept]
                 done |= accept
             ct += 1
-        print("successfully sampled)", sum(done), "/", len(done))
+        sum_done = sum(done) if len(done.size()) > 0 else sum([done])
+        len_done = len(done) if len(done.size()) > 0 else 1
+        print("successfully sampled", sum_done, "/", len_done)
         return x
 
 
