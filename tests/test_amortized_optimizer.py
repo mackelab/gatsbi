@@ -51,7 +51,7 @@ class TestBaseOptimiser(unittest.TestCase):
             _prior,
             _simulator,
             [gen_opt_args, dis_opt_args],
-            loss_str=loss,
+            loss=loss,
             training_opts=training_opts,
         )
         opt.train(epochs=2)
@@ -88,7 +88,7 @@ class TestUnrolledGANOpt(unittest.TestCase):
             prior=_prior,
             simulator=_simulator,
             optim_args=[gen_opt_args, dis_opt_args],
-            loss_str=loss,
+            loss=loss,
             training_opts=training_opts,
         )
         opt.train(epochs=2)

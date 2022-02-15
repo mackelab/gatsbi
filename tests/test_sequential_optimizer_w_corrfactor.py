@@ -67,7 +67,7 @@ class TestSeqOptimiser(unittest.TestCase):
             simulator=_simulator,
             optim_args=[gen_opt_args, dis_opt_args],
             dataloader=dataloader,
-            loss_str=loss,
+            loss=loss,
             round_number=round_number,
             training_opts=training_opts,
         )
@@ -118,7 +118,7 @@ class TestSeqOptimiser(unittest.TestCase):
             simulator=_simulator,
             optim_args=[gen_opt_args, dis_opt_args],
             dataloader=dataloader,
-            loss_str=loss,
+            loss=loss,
             round_number=round_number,
             training_opts=training_opts,
         )
@@ -172,7 +172,7 @@ class TestSeqOptimiser(unittest.TestCase):
             simulator=_simulator,
             optim_args=[gen_opt_args, dis_opt_args],
             dataloader=dataloader,
-            loss_str=loss,
+            loss=loss,
             round_number=round_number,
             training_opts=training_opts,
         )
