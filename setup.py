@@ -24,7 +24,7 @@ _base = [
 ]
 _sbi_extras = [
     "sbibm@git+https://github.com/mackelab/sbibm#egg=sbibm",
-    "sbi@git+https://github.com/mackelab/sbi#egg=sbi",
+ #   "sbi@git+https://github.com/mackelab/sbi#egg=sbi",
 ]
 
 setup(
