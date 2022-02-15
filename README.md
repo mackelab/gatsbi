@@ -26,17 +26,17 @@ Hyperparameter settings for each of the experiments are available in `tasks/`
 To reproduce the exact experiments described in the paper, use the following run_scripts from the repository's root directory (note that this relies on `wandb` to log experiments)
 - `run_benchmarks.py` for benchmark tasks
     ```
-    python run_benchmarks.py --project_name="Benchmarks" --task_name="two_moons"
+    $python run_benchmarks.py --project_name="Benchmarks" --task_name="two_moons"
     ```
     `task_name` = `slcp` or `two_moons` for amortized GATSBI, `slcp_seq` or `two_moons_seq` for sequential GATSBI.
 - `run_highdim_applications.py` for high dimensional tasks
     ```
-    python run_highdim_applications.py --project_name="High Dimensional Applications" --task_name="shallow_water_model"
+    $python run_highdim_applications.py --project_name="High Dimensional Applications" --task_name="shallow_water_model"
     ```
     `task_name` = `shallow_water_model` or `camera_model`.
 - `run_inference_nle/npe/nre.py` for running NPE / NLE / NRE on shallow water model.
     ```
-    python run_inference_nle/npe/nre.py
+    $python run_inference_nle/npe/nre.py
     ```
 
 ### Figures
