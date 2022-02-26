@@ -74,7 +74,6 @@ def _log_metrics(opt):
     opt.discriminator.eval()
     theta_fake_cv = opt._fwd_pass_generator(obs_test).reshape(*list(theta_test.shape))
     theta_fake_cv_detach = theta_fake_cv.clone().detach().reshape(*list(theta_test.shape))
-    print(theta_fake_cv.shape, obs_test.shape)
 
     dis_fake_cv = opt.discriminator([theta_fake_cv, obs_test])
     dis_fake_cv_detach = opt.discriminator([theta_fake_cv_detach, obs_test])
