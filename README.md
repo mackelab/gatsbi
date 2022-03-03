@@ -8,7 +8,7 @@ The code depends both on the simulation-based inference package [`sbi`](https://
 ___
 With a working Python environment, install `gatsbi` using `pip`:
 ```
-pip install https://github.com/mackelab/gatsbi
+pip install "git+https://github.com/mackelab/gatsbi"
 ```
 
 ### Mininmal example
