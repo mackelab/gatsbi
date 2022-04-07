@@ -1,6 +1,7 @@
 from copy import deepcopy
 from time import time
 from typing import Optional
+from os.path import join
 
 import torch
 
@@ -44,7 +45,10 @@ class UnrolledOpt(Base):
                 tic = time()
                 self._update_discriminator(theta, obs)
                 print("Time", time() - tic)
-            self.dis_state_dict = deepcopy(self.discriminator).state_dict()
+            # Need to save and load statedict, since deepcopy doesnt work after discrim. fwd. pass
+            torch.save(self.discriminator.state_dict(), join(self.logger.dir, "unrolled_discrim.pt"))
+            self.dis_state_dict = torch.load(join(self.logger.dir, "unrolled_discrim.pt"))
+#             self.dis_state_dict = deepcopy(self.discriminator).state_dict()
             torch.cuda.empty_cache()
 
             # Roll discriminator:
