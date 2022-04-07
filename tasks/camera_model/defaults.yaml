@@ -3,12 +3,12 @@ dis_iter: 1
 dis_opt_args:
 - 0.0002
 - - 0.5
-  - 0.9
+  - 0.99
 gen_iter: 1
 gen_opt_args:
 - 0.0002
 - - 0.5
-  - 0.9
+  - 0.99
 hold_out: 100
 loss: cross_entropy
 max_norm_dis: .01
