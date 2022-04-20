@@ -38,6 +38,7 @@ To reproduce the exact experiments described in the paper, use the following run
     ```
     python run_inference_nle/npe/nre.py
     ```
+Note that we **do not** provide training data for the shallow water model in this repository. Please use `sample_shallow_water_model.py` to generate training samples locally.
 
 ### Figures
 ___
