@@ -3,20 +3,20 @@
 Code package `gatsbi` implementing method and experiments described in the associated manuscript  ["GATSBI: Generative Adversarial Training for Simulation-Based Inference"](https://openreview.net/forum?id=kR1hC6j48Tp&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICLR.cc%2F2022%2FConference%2FAuthors%23your-submissions))
 
 The code depends both on the simulation-based inference package [`sbi`](https://github.com/mackelab/sbi) and the benchmark framework [`sbibm`](https://github.com/mackelab/sbibm).
-
-### Installation
 ___
+### Installation
+
 With a working Python environment, install `gatsbi` using `pip`:
 ```
 pip install "git+https://github.com/mackelab/gatsbi"
 ```
-
+___
 ### Mininmal example
-___
-For a minimal demonstration of how to use `gatsbi` see `quickstart.ipynb`.
 
-### Experiments
+For a minimal demonstration of how to use `gatsbi` see `quickstart.ipynb`.
 ___
+### Experiments
+
 The paper describes results for the following experiments: 2 benchmark tasks, the shallow water model, and a noisy camera model.
 
 Code for setting up priors, simulator, GAN networks and any other pre-/post-processing code is available inside `gatsbi.task_utils`.
@@ -38,8 +38,8 @@ To reproduce the exact experiments described in the paper, use the following run
     ```
     python run_inference_nle/npe/nre.py
     ```
-Note that we **do not** provide training data for the shallow water model in this repository. Please use `sample_shallow_water_model.py` to generate training samples locally.
-
-### Figures
+Note that we **do not** provide training data for the shallow water model in this repository. Please use `sample_shallow_water.py` to generate training samples locally.
 ___
+### Figures
+
 Code to reproduce the figures in the paper is available in `plotting_code`, along with the required data `plotting_code/plotting_data`, and the final plots `plotting_code/plots`. Note that accessing the data requires Git LFS installation.
