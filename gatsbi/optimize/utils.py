@@ -112,7 +112,7 @@ def _log_metrics(opt):
 
     # Update logger
     if opt.logger is not None:
-        opt.logger.history.add(dict(opt.df.loc[opt.logger.step]))
+        opt.logger.log(dict(opt.df.loc[opt.logger.step]))
 
 
 def _stop_training(opt):
